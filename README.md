@@ -1,7 +1,7 @@
 # CarDetection
 
 #### 4.1
-These files in CarDetection:
+These files in CarDetection/practicd-webpack:
 
 **entry.js**
 

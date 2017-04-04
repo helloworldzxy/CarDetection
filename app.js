@@ -20,7 +20,9 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'))); //托管静态资源文件
+
+//app.use(express.static(path.join(__dirname, 'public'))); //托管静态资源文件
+app.use('/static', express.static(path.join(__dirname, 'public/output'))); //注意！路径要对应于webpack的output的path配置项
 
 app.use('/', index);
 app.use('/users', users);
