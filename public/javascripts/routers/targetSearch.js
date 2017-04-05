@@ -61,7 +61,7 @@ ReactDOM.render(
 			<Route path="/staff" component={Staff}/>
 		</Route>
 	</Router>
-, `document.getElementById('main')`);
+, document.getElementById('main')`);
 
 
 
