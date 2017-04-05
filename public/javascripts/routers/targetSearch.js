@@ -40,6 +40,18 @@ const Motor = () => { return <div><div>MotorMotorMotorMotorMotorMotor</div></div
 const NonMotor = () => { return <div><div>NonMotorNonMotorNonMotorNonMotorNonMotorNonMotor</div></div>; };
 const Staff = () => { return <div><div>StaffStaffStaffStaffStaff</div></div>; };
 
+
+/*
+- Router组件有一个参数history，它的值hashHistory表示，路由的切换由URL的hash变化决定，即URL的#部分发生变化。
+以下，用户访问localhost:3002/targetSearch，实际会看到的是localhost:3002/targetSearchs/#/；
+访问localhost:3002/targetSearch/motor, 实际会看到的是localhost:3002/targetSearchs/#/motor.
+
+- 用户访问根路由localhost:3002/targetSearch，组件TargetSearch就会加载到`document.getElementById('main')`.
+
+- Route组件可以嵌套。如下，用户访问/motor, 会先加载TargetSearch组件，然后在它内部加载Motor组件。
+
+- 如果不写IndexRoute，则用户访问根路由时，不会加载任何子组件，也即TargetSearch组件的`this.props.children`为`undefined`.
+*/
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={TargetSearch}>
@@ -49,7 +61,7 @@ ReactDOM.render(
 			<Route path="/staff" component={Staff}/>
 		</Route>
 	</Router>
-, document.getElementById('main'));
+, `document.getElementById('main')`);
 
 
 

@@ -46,6 +46,6 @@ import const时需要大括号而import navigation.js不需要大括号。
 - searchTarget.js中，可以用`ReactDOM.render`实现页面布局，为什么要用`class TargetSearch extends Component`定义一个TargetSearch组件？
 需要路由，用react-router;方便组件化。
 
-- 在`ReactDOM.render()`的第一个参数中用Router实现路由后，访问相应的url如http://localhost:3002/targetSearch#/nonmotor可以访问到，但是单击按钮访问不到--在li的a标签中也要相应设置`href="/targetSearch#/motor"`等，表示url跳转到/targetSearch#/motor等。如果href不设置，只设置Router，则单击后跳转的url为localhost:3002/motor，就不是相对/targetSearch跳转了。相当于：Router的设置，是设置每个url对应的页面应该渲染成的样子；href是控制单击链接时的跳转。
+- 在`ReactDOM.render()`的第一个参数中用Router实现路由后，访问相应的url如`http://localhost:3002/targetSearch#/`nonmotor可以访问到，但是单击按钮访问不到--在li的a标签中也要相应设置`href="/targetSearch#/motor"`等，表示url跳转到/targetSearch#/motor等。相当于：Router的设置，是设置每个url对应的页面应该渲染成的样子；href是控制单击链接时的跳转。
 
 
