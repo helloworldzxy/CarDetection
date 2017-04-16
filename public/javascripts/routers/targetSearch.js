@@ -5,6 +5,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { HeaderBanner } from '../components/display/headerBanner.js';
 import Navigation from '../components/display/navigation.js'; //注意二者引入方式，一个带大括号一个不带
 
+import Motor from '../components/container/motor.js';
+
 require('../../stylesheets/common.css');
 
 class TargetSearch extends Component { //该class继承自Component, 用于下面的Route中
@@ -36,7 +38,7 @@ class TargetSearch extends Component { //该class继承自Component, 用于下�
  
 // , document.getElementById("main"));
 
-const Motor = () => { return <div><div>MotorMotorMotorMotorMotorMotor</div></div>; };
+// const Motor = () => { return <div><div>MotorMotorMotorMotorMotorMotor</div></div>; };
 const NonMotor = () => { return <div><div>NonMotorNonMotorNonMotorNonMotorNonMotorNonMotor</div></div>; };
 const Staff = () => { return <div><div>StaffStaffStaffStaffStaff</div></div>; };
 

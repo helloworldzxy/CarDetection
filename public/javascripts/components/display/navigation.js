@@ -19,7 +19,7 @@ export default class Navigation extends Component{ //模块只有一个输出值
 		return (
 			<div className="navigation">
 				<ul>
-					<li id="clueManage" className="nav-key"><a href="/">线索管理</a></li>
+					<li id="clueManage" className="nav-key"><a href="/clueManage">线索管理</a></li>
 					<li id="taskManage" className="nav-key"><a href="/">任务管理</a></li>
 					<li id="targetSearch" className="nav-key"><a href="/targetSearch">目标检索</a></li>
 					<li id="motor" className="nav-item"><a href="/targetSearch#/motor">机动车查询</a></li>

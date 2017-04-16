@@ -13,6 +13,7 @@ const config = {
 	devtool: 'eval-source-map',
 	entry: {
 		'targetSearch': [path.join(CHUNK_PATH, 'targetSearch.js')],
+		'clueManage': [path.join(CHUNK_PATH, 'clueManage.js')],
 	},
 	output:{
 		path: OUTPUT_PATH,
@@ -57,6 +58,12 @@ const config = {
 			chunks: ['targetSearch'],
 			template: path.join(OUTPUT_PATH, 'assets/template.jade'),
 			title: '目标检测',
+		}),
+		new HtmlWebpackPlugin({
+			filename: path.join(OUTPUT_PATH, 'pages/clueManage.html'),
+			chunks: ['clueManage'],
+			template: path.join(OUTPUT_PATH, 'assets/template.jade'),
+			title: '线索管理',
 		}),
 		new webpack.LoaderOptionsPlugin({
 			options: {

@@ -48,4 +48,11 @@ import const时需要大括号而import navigation.js不需要大括号。
 
 - 在`ReactDOM.render()`的第一个参数中用Router实现路由后，访问相应的url如`localhost:3002/targetSearch#/nonmotor`可以访问到，但是单击按钮访问不到--在li的a标签中也要相应设置`href="/targetSearch#/motor"`等，表示url跳转到/targetSearch#/motor等。相当于：Router的设置，是设置每个url对应的页面应该渲染成的样子；href是控制单击链接时的跳转。
 
+### 4.5 制作motor.js中的searchMotorForm.js表格
+#### 注意：
+- searchMotorForm.js中定义SearchForm组件，其中包括各个筛选条件：用react-date-picker制作日期时间选择器，用Field制作input,select等输入框；然后依次用reduxForm，connect封装SearchForm组件；最后export封装后的组件。
+- 在用connet封装时，要定义dispatch，其中用到自己定义的models/search.js中的submit函数。
+- 在motor.js中引用组件`<searchMotorForm/>`时，外层必须包裹`<Provider>`，并且要有store属性，`store={createStore(combineReducers(reducers), applyMiddleware(thunk))}`
+- 定义各种reducers(引入redux-form中的reducer; 创建searchReducer)
+
 
