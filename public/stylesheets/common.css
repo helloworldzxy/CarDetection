@@ -1,0 +1,94 @@
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color: #2d374b;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+
+.header-banner {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    
+    font-size: 28px;
+    line-height: 50px;
+    text-align: center;
+
+    color: #fff;
+    background-color: #00994d;
+}
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.navigation{
+	width: 150px;
+	float: left;
+
+	background-color: grey;  /* test */ 
+}
+
+.content{
+	width: 820px;
+	float: right;
+
+	background-color: #babbbd; /* test */ 
+}
+
+/* !!! li样式设置之前应该先将ul的margin padding均设为0 !!! */
+
+.navigation li{
+	height: 40px;
+	line-height: 40px;
+
+	list-style-type: none;
+	
+	background-color: #d4e9f1;  /* test */
+}
+
+
+li.nav-key{ /* !!! li和.nav-key中间不要有空格 !!! */
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	
+	padding-left: 10px;
+
+	border-top: 2px solid #00994d;
+}
+
+li.nav-item{
+	font-size: 13px;
+	text-align: center;
+
+	border-top: 1px solid #00994d;
+}
+
+li.nav-active{
+	background-color: #00994d;
+}
+li.nav-active a{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
